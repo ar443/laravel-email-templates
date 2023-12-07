@@ -1,0 +1,23 @@
+{
+    "name": "ar443/email-template",
+    "description": "This package alow you to create editable email templates",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "WaqasAr",
+            "email": "waqasch443@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ar443\\LaravelEmailTemplate\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ar443\\LaravelEmailTemplate\\Tests": "tests/" 
+        }
+    },
+}
