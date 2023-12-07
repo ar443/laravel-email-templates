@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class EmailTemplateController extends Controller
+class WGLEmailTemplateController extends Controller
 {
 
     public function index()
