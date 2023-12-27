@@ -1,4 +1,4 @@
-@extends('email-templates.layout')
+@extends('LaravelEmailTemplate.layout')
 
 @section('content')
     <h2>Email Templates</h2>
