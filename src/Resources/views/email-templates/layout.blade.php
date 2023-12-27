@@ -1,33 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>@yield('title', 'Email Templates')</title>
-        <script src="../../assets/ckeditor/ckeditor.js"></script>
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    
-    <style>
-        .input-container {
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-        .input-container input[type="text"] {
-            font-size: 24px;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            width: 300px;
-        }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laravel Email Template</title>
+    <link rel="stylesheet" href="{{ asset('LaravelEmailTemplate/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('LaravelEmailTemplate/css/style.css') }}">
 </head>
+
 <body>
-    <div class="container mt-3">
-        @yield('content')
+    <div class="editor">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    @yield('content')
+                </div>
+            </div>
+        </div>
     </div>
+    <script src={{ asset('LaravelEmailTemplate/js/bootstrap.bundle.min.js') }}></script>
+    <script src={{ asset('LaravelEmailTemplate/js/ckeditor.js') }}></script>
+    <script>
+        CKEDITOR.replace('body');
+    </script>
 </body>
-<script>
-    CKEDITOR.replace('body');
-</script>
+
 </html>

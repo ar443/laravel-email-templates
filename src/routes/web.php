@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use ar443\LaravelEmailTemplate\Controllers\WGLEmailTemplateController;
+use ar443\LaravelEmailTemplate\Controllers\EmailTemplateController;
 
-Route::resource('email-templates', WGLEmailTemplateController::class);
+Route::resource('email-templates', EmailTemplateController::class);
 
 ?>
