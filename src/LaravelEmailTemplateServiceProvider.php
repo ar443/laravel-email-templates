@@ -19,7 +19,7 @@ class LaravelEmailTemplateServiceProvider extends ServiceProvider
         ], 'views');
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
         $this->loadMigrationsFrom(__DIR__ . '/Migrations');
-        $this->loadViewsFrom(__DIR__ . 'Resources/views/email-templates', 'ar443\LaravelEmailTemplate');
+        $this->loadViewsFrom(__DIR__ . 'Resources/views/', 'ar443\LaravelEmailTemplate');
 
     }
 

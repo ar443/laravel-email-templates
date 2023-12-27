@@ -12,12 +12,12 @@ class EmailTemplateController extends Controller
     public function index()
     {
         $emailTemplates = EmailTemplate::all();
-        return view('email-templates.index', compact('emailTemplates'));
+        return view('LaravelEmailTemplate.index', compact('emailTemplates'));
     }
 
     public function create()
     {
-        return view('email-templates.create');
+        return view('LaravelEmailTemplate.create');
     }
 
     public function store(Request $request)
@@ -29,12 +29,12 @@ class EmailTemplateController extends Controller
 
         EmailTemplate::create($request->all());
 
-        return redirect()->route('email-templates.index')->with('success', 'Email template created successfully.');
+        return redirect()->route('LaravelEmailTemplate.index')->with('success', 'Email template created successfully.');
     }
 
     public function edit(EmailTemplate $emailTemplate)
     {
-        return view('email-templates.edit', compact('emailTemplate'));
+        return view('LaravelEmailTemplate.edit', compact('emailTemplate'));
     }
 
     public function update(Request $request, EmailTemplate $emailTemplate)
@@ -46,14 +46,14 @@ class EmailTemplateController extends Controller
 
         $emailTemplate->update($request->all());
 
-        return redirect()->route('email-templates.index')->with('success', 'Email template updated successfully.');
+        return redirect()->route('LaravelEmailTemplate.index')->with('success', 'Email template updated successfully.');
     }
 
     public function destroy(EmailTemplate $emailTemplate)
     {
         $emailTemplate->delete();
 
-        return redirect()->route('email-templates.index')->with('success', 'Email template deleted successfully.');
+        return redirect()->route('LaravelEmailTemplate.index')->with('success', 'Email template deleted successfully.');
     }
 
 }
