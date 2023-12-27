@@ -7,6 +7,8 @@
     <title>Laravel Email Template</title>
     <link rel="stylesheet" href="{{ asset('LaravelEmailTemplate/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('LaravelEmailTemplate/css/style.css') }}">
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+
 </head>
 
 <body>
@@ -20,7 +22,6 @@
         </div>
     </div>
     <script src={{ asset('LaravelEmailTemplate/js/bootstrap.bundle.min.js') }}></script>
-    <script src={{ asset('LaravelEmailTemplate/js/ckeditor.js') }}></script>
     <script>
         CKEDITOR.replace('body');
     </script>
