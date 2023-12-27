@@ -31,6 +31,10 @@ class EmailTemplateController extends Controller
 
         return redirect()->route('email-templates.index')->with('success', 'Email template created successfully.');
     }
+    public function show(EmailTemplate $emailTemplate)
+    {
+        return view('LaravelEmailTemplate.show', compact('emailTemplate'));
+    }
 
     public function edit(EmailTemplate $emailTemplate)
     {
