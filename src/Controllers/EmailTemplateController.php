@@ -29,7 +29,7 @@ class EmailTemplateController extends Controller
 
         EmailTemplate::create($request->all());
 
-        return redirect()->route('LaravelEmailTemplate.index')->with('success', 'Email template created successfully.');
+        return redirect()->route('email-templates.index')->with('success', 'Email template created successfully.');
     }
 
     public function edit(EmailTemplate $emailTemplate)
@@ -46,14 +46,14 @@ class EmailTemplateController extends Controller
 
         $emailTemplate->update($request->all());
 
-        return redirect()->route('LaravelEmailTemplate.index')->with('success', 'Email template updated successfully.');
+        return redirect()->route('email-templates.index')->with('success', 'Email template updated successfully.');
     }
 
     public function destroy(EmailTemplate $emailTemplate)
     {
         $emailTemplate->delete();
 
-        return redirect()->route('LaravelEmailTemplate.index')->with('success', 'Email template deleted successfully.');
+        return redirect()->route('email-templates.index')->with('success', 'Email template deleted successfully.');
     }
 
 }
