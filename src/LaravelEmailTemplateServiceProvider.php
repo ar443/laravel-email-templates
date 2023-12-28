@@ -17,10 +17,6 @@ class LaravelEmailTemplateServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/public' => public_path('LaravelEmailTemplate'),
         ], 'views');
-        $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
-        $this->loadMigrationsFrom(__DIR__ . '/Migrations');
-        $this->loadViewsFrom(__DIR__ . 'Resources/views/', 'ar443\LaravelEmailTemplate');
-
     }
 
     public function register()
