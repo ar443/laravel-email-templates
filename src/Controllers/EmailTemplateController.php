@@ -8,7 +8,6 @@ use Illuminate\Routing\Controller;
 
 class EmailTemplateController extends Controller
 {
-
     public function index()
     {
         $emailTemplates = EmailTemplate::all();
@@ -31,18 +30,24 @@ class EmailTemplateController extends Controller
 
         return redirect()->route('email-templates.index')->with('success', 'Email template created successfully.');
     }
-    public function show(EmailTemplate $emailTemplate)
+    public function show(Request $request)
     {
+        $emailTemplate = EmailTemplate::findOrFail($request->email_template);
         return view('LaravelEmailTemplate.show', compact('emailTemplate'));
     }
 
-    public function edit(EmailTemplate $emailTemplate)
+    public function edit(Request $request)
     {
+
+        $emailTemplate = EmailTemplate::findOrFail($request->email_template);
         return view('LaravelEmailTemplate.edit', compact('emailTemplate'));
     }
 
-    public function update(Request $request, EmailTemplate $emailTemplate)
+    public function update(Request $request, $email_template)
     {
+        
+        $emailTemplate = EmailTemplate::findOrFail($request->email_template);
+
         $request->validate([
             'title' => 'required|max:255',
             'body' => 'required',
@@ -53,13 +58,14 @@ class EmailTemplateController extends Controller
         return redirect()->route('email-templates.index')->with('success', 'Email template updated successfully.');
     }
 
-    public function destroy(EmailTemplate $emailTemplate)
+    public function destroy(Request $request)
     {
+        
+        $emailTemplate = EmailTemplate::findOrFail($request->email_template);
         $emailTemplate->delete();
 
         return redirect()->route('email-templates.index')->with('success', 'Email template deleted successfully.');
     }
-
 }
 
 
